@@ -1,0 +1,13 @@
+<h1>Starship</h1>
+
+<mat-list title="Starship">
+  <mat-list-item  (click)="goDetail(item.id)" *ngFor="let item of starshipAction$ | async">
+    <div mat-line><b>Name: </b>{{item.name}}</div>
+    <div mat-line><b>Model: </b>{{item.model}}</div>
+    <div mat-line><b>Class: </b>{{item.starship_class}}</div>
+    <div mat-line><b>Created: </b>{{item.created | date}} </div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <div mat-subheader>
+  </div>
+</mat-list>

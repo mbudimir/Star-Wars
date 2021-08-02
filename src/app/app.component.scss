@@ -1,0 +1,12 @@
+.navbar {
+  margin-left: 200px;
+}
+
+.nav-link {
+  font-size: large;
+  cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #007ACC;
+}

@@ -1,0 +1,51 @@
+<mat-card *ngIf="starship" >
+  <mat-card-header>
+    <mat-card-title>{{starship.name}}</mat-card-title>
+    <mat-card-subtitle>{{starship.model}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item> <b>Manufacturer:</b> {{starship.manufacturer}} </mat-list-item>
+      <mat-list-item> <b>Cost in credits:</b> {{starship.cost_in_credits}} </mat-list-item>
+      <mat-list-item> <b>Length:</b> {{starship.length}} </mat-list-item>
+      <mat-list-item> <b>Max Atmosphering_speed:</b> {{starship.max_atmosphering_speed}} </mat-list-item>
+      <mat-list-item> <b>Crew:</b> {{starship.crew}} </mat-list-item>
+      <mat-list-item> <b>Passengers:</b> {{starship.passengers}} </mat-list-item>
+      <mat-list-item> <b>Cargo Capacity:</b> {{starship.cargo_capacity}} </mat-list-item>
+      <mat-list-item> <b>Hyperdrive_rating:</b> {{starship.hyperdrive_rating}} </mat-list-item>
+      <mat-list-item> <b>MGLT:</b> {{starship.MGLT}}</mat-list-item>
+      <mat-list-item> <b>Starship Class:</b> {{starship.starship_class}} </mat-list-item>
+      <mat-list-item> <b>Created:</b> {{starship.created}} </mat-list-item>
+    </mat-list>
+    <br/>
+    <h3>Pilots</h3>
+      <table class="table mb-0" *ngIf="pilots.length > 0" >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birth Year</th>
+            <th>Height</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let pilot of pilots">
+          <tr (click)="goPilotDetail(pilot.id)">
+            <td>{{ pilot.name }}</td>
+            <td>{{ pilot.gender }}</td>
+            <td>{{ pilot.birth_year }}</td>
+            <td>{{ pilot.height }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="pilots.length == 0">Dont have any pilots</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn btn-outline-secondary mr-3"
+      style="width:80px"
+      type="button"
+      title="Back to starships List"
+      [routerLink]="['/starships']"> Back
+    </button>
+  </mat-card-actions>
+</mat-card>
+

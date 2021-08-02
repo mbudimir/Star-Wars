@@ -1,0 +1,11 @@
+<h1>Pilots</h1>
+
+<mat-list title="Pilots">
+  <mat-list-item  (click)="goDetail(item.id)" *ngFor="let item of pilotAction$ | async">
+    <div mat-line><b>Name: </b>{{item.name}}</div>
+    <div mat-line><b>Gender: </b>{{item.gender}}</div>
+    <div mat-line><b>Birth Year: </b>{{item.birth_year}}</div>
+    <div mat-line><b>Height: </b>{{item.height}}</div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>

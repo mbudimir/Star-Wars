@@ -1,0 +1,26 @@
+<mat-card *ngIf="pilot" >
+  <mat-card-header>
+    <mat-card-title>{{pilot.name}}</mat-card-title>
+    <mat-card-subtitle>{{pilot.gender}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item> <b>Birth Year: </b> {{pilot.birth_year}} </mat-list-item>
+      <mat-list-item> <b>Eye Color: </b> {{pilot.eye_color}} </mat-list-item>
+      <mat-list-item> <b>Hair Color: </b> {{pilot.hair_color}} </mat-list-item>
+      <mat-list-item> <b>Height: </b> {{pilot.height}} </mat-list-item>
+      <mat-list-item> <b>Mass: </b> {{pilot.mass}} </mat-list-item>
+      <mat-list-item> <b>Skin Color: </b> {{pilot.skin_color}} </mat-list-item>
+    </mat-list>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn btn-outline-secondary mr-3"
+      style="width:150px"
+      type="button"
+      title="Back to starships List"
+      [routerLink]="['/starships']"> Go to Starships
+    </button>
+  </mat-card-actions>
+</mat-card>
+
